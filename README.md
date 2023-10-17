@@ -102,7 +102,7 @@ Therefore, through these mechanisms, batch normalization significantly eases the
 
 **4)** **Topic:** Fundamentals, **Level:** Advanced
 
-**Q:** L1 and L2 regularization both prevent overfitting, but they do so in different ways. Can you explain the difference in their impact on the model's weights?                    |
+**Q:** L1 and L2 regularization both prevent overfitting, but they do so in different ways. Can you explain the difference in their impact on the model's weights? 
 
 **Simple:**
 Imagine you're in a candy store, and your mom gives you a rule for choosing candies: 
@@ -130,8 +130,6 @@ So, the key difference in impact on weights is: L1 can zero out some weights, le
 **5)** **Topic:** Fundamentals, **Level:** Advanced
 
 **Q:** When would you choose to use transfer learning? What are the potential pitfalls of using a pre-trained model for a new task?
-
-I'll start with a simple analogy followed by a more technical explanation.
 
 **Simple:**
 
