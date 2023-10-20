@@ -159,30 +159,154 @@ When using transfer learning, it's essential to assess the similarity between th
 ---
 
 
-| 6   | Fundamentals            | Advanced    | How does data augmentation benefit training? Can you provide an example where it might be detrimental?                                                                         |
-| 7   | Fundamentals            | Advanced    | Discuss the primary differences between momentum and the Adam optimizer. In what scenarios might one be preferred over the other?                                              |
-| 8   | Fundamentals            | Advanced    | How can you diagnose overfitting and underfitting in a deep learning model? What strategies would you employ to mitigate these issues?                                         |
-| 9   | Fundamentals            | Advanced    | How does hyperparameter tuning affect the performance of a deep learning model? What methods can you use to efficiently search for optimal hyperparameters?                    |
-| 10  | Architectures           | Intermediate | In the context of ResNets, what is the primary purpose of skip connections (or residual connections)? How do they help in training deeper networks?                            |
-| 11  | Architectures           | Advanced    | Compare and contrast the architecture and use-cases for Recurrent Neural Networks, Long Short-Term Memory networks, and Gated Recurrent Units.                                 |
-| 12  | Architectures           | Advanced    | What are capsule networks and how do they attempt to address the limitations of convolutional neural networks?                                                                |
-| 13  | Architectures           | Advanced    | Describe the scenarios where traditional CNNs and RNNs fall short, where you would instead recommend the use of Graph Neural Networks. How do GNNs handle relational data differently? |
-| 14  | Architectures           | Advanced    | Explain the concept of self-supervised learning and how it differs from supervised and unsupervised learning paradigms. What are its main advantages and potential applications in real-world scenarios? |
-| 15  | Architectures           | Advanced    | Describe the process and importance of neural architecture search in model development. What are the computational costs, and how can they be mitigated?                       |
-| 16  | Architectures           | Advanced    | Define meta-learning in the context of deep learning, and provide examples of scenarios where meta-learning is beneficial. How does it help in scenarios with limited labeled data or diverse tasks? |
-| 17  | Architectures           | Advanced    | What are Spatial Transformer Networks, and how do they enhance the capabilities of CNNs? What specific problem do they solve regarding data representation?                    |
-| 18  | Architectures           | Advanced    | Explain the principle of zero-shot learning. How does it differ from few-shot learning, and in what scenarios might it be particularly useful or challenging?                   |
-| 19  | Architectures           | Advanced    | What are autoencoders, and what distinguishes them from other neural network architectures? What are their primary use-cases, and what are the differences between variational autoencoders (VAEs) and traditional autoencoders? |
-| 20  | Architectures           | Advanced    | What are Siamese networks, and where are they most effectively applied? How do they differ in architecture and function from traditional neural networks?                      |
-| 21  | Architectures           | Advanced    | Can you explain the architecture of WaveNet and its significance in deep learning applications? How does it differ from traditional recurrent neural networks in handling sequential data? |
-| 22  | Architectures           | Advanced    | How do generative models differ from discriminative models in deep learning? What are their respective strengths and weaknesses, and where are they typically applied?       |
-| 23  | Training Techniques     | Intermediate | What is dropout, and how does it prevent overfitting in neural networks?                                                                                                       |
-| 24  | Training Techniques     | Advanced    | Explain the concept and process of backpropagation. Why is it central to training deep neural networks?                                                                        |
-| 25  | Training Techniques     | Advanced    | What is the significance of weight initialization in deep neural networks? How does it affect the training process?                                                            |
-| 26  | Training Techniques     | Advanced    | Explain the difference between batch, mini-batch, and stochastic gradient descent. How do they affect the speed and stability of the training process?                         |
-| 27  | Training Techniques     | Advanced    | How do you implement early stopping in a deep learning model, and why might you choose to use it? What are the potential drawbacks?                                            |
-| 28  | Training Techniques     | Advanced    | What is the purpose of a loss function in training deep learning models? Can you give examples of different types of loss functions and explain their applications?           |
-| 29  | Training Techniques     | Advanced    | Explain the concept of attention mechanisms in neural networks. How do they improve model performance, and what are typical use cases?                                        |
+**6) Topic:** Fundamentals, **Level**:Advanced
+
+**Q:** How does data augmentation benefit training? Can you provide an example where it might be detrimental?
+
+**Simple**:
+
+Imagine you have a small box of crayons, but you want to make a super colorful picture. So, you get creative! You mix colors, tilt the crayons for different shades, or even draw lines in unique ways to make new patterns. This way, your small box of crayons gives you lots of new options to make your picture more exciting. That's like data augmentation in computer learning - it's a way to teach the computer with more examples by slightly changing the ones we already have, like flipping a photo upside down or making it brighter. But remember, if you get too wild and start using colors or drawings that don't make sense (like giving the sky a grassy texture), your picture won't look right. In the same way, if computers learn from data that's changed too much or in the wrong way, they can get confused and make mistakes.
+
+**Detailed**:
+
+Data augmentation is a strategy used in machine learning to increase the diversity and amount of training data without actually collecting new data. This is done by applying various transformations to existing data points, such as rotation, scaling, flipping, or cropping for images, thereby creating different scenarios from the original data. This technique helps in making the model more robust, as it gets trained on more varied data, simulating a more comprehensive real-world scenario and thus improving its ability to generalize.
+
+However, there are instances where data augmentation can be detrimental. For instance, in medical imaging, an excessive or incorrect augmentation (like excessive rotation or zooming) might distort critical features or anatomy, leading the model to learn from inaccurate representations. Additionally, in cases where specific orientations or characteristics are essential (e.g., satellite images where north needs to be at the top), random flips or rotations could lead to a model misinterpreting the critical attributes. Moreover, augmentation needs to be class-consistent; for example, an augmentation that changes a handwritten '6' to a '9' due to flipping is creating misleading data. Hence, the choice of augmentation techniques must be sensitive to the context and specifics of the data and the problem being addressed.
+
+---
+
+**7) Topic:** Fundamentals, **Level**:Advanced
+
+**Q:** Discuss the primary differences between momentum and the Adam optimizer. In what scenarios might one be preferred over the other?
+
+**Simple:**
+
+Imagine you're sledding down a hill. At first, you go slowly, but as you keep sliding, you get faster and faster because you're building momentum. In the world of learning for computers, there's something similar called "momentum." It helps the computer not get stuck if it's trying to learn something and the learning path gets a little bumpy or steep. 
+
+Now, imagine if your sled could figure out on its own where to go faster or slower depending on how steep or bumpy the hill is. That's kind of like another helper for computer learning called "Adam." Adam is like a super-smart sled that can adjust its speed perfectly on different parts of the hill. 
+
+Sometimes, if the hill is pretty simple, the momentum can be enough and even better because it's simpler. But if the hill has lots of different slopes and bumps, Adam might be better because it can adjust more carefully.
+
+**Detailed:**
+
+Momentum and Adam are both optimization algorithms used in training neural networks, and they have distinct characteristics.
+
+Momentum is like a ball rolling downhill, accumulating velocity as per the slope of the hill. It's a technique that helps accelerate the Gradient Descent algorithm to converge faster. It does this by adding a fraction of the previous update vector to the current one, thus having a 'memory' of the previous direction of descent. It helps the model to prevent oscillations and overshooting, but its hyperparameters, particularly the learning rate and momentum coefficient, need to be carefully tuned.
+
+On the other hand, Adam (Adaptive Moment Estimation) combines ideas from Momentum and another method called RMSprop. Adam calculates adaptive learning rates for each parameter by not just considering the gradient (like Momentum) but also keeping track of the second moments (the square of gradients). In essence, Adam is more complex and computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients.
+
+In scenarios with simple loss landscapes or when computational resources are limited, Momentum might be preferred because of its simplicity and fewer computations. However, in deeper, more complex networks, or non-stationary objectives, Adam is often favored because of its adaptive nature, which leads to a more nuanced and stable convergence, especially in the presence of noisy or sparse gradients. Nevertheless, the choice may also depend on the specific dataset and problem at hand, and empirical testing is often required to make an optimal choice.
+
+---
+
+**8) Topic:** Fundamentals, **Level**:Advanced
+
+**Q:**  How can you diagnose overfitting and underfitting in a deep learning model? What strategies would you employ to mitigate these issues?
+
+**Simple:**
+
+Imagine you have a magical parrot that you're teaching to talk. If you only teach it funny jokes, it will be great at making people laugh at parties, but it won't know how to say "hello" or "goodbye." This parrot is like a computer model that's "overfitting"—it learned the jokes too well but can't handle normal conversations.
+
+Now, if your parrot just squawks and can't say any words or jokes properly, it's like a model that's "underfitting." It didn't learn enough from you to talk or joke.
+
+To help our parrot, we'd teach it a mix of jokes and everyday words, and make sure it meets new people so it doesn't just repeat the same jokes. For the squawking parrot, maybe we need to spend more time teaching it or try different ways to make learning easier.
+
+**Detailed:**
+
+Overfitting and underfitting are common issues in training deep learning models. 
+
+Overfitting occurs when the model learns the training data too well, capturing noise and details to the extent that it negatively impacts its performance on new, unseen data. You can diagnose overfitting if your model shows high accuracy on training data but performs poorly on the validation or test data (low generalization). 
+
+Underfitting, on the other hand, is when the model is too simple — it hasn't captured enough information about the data, even missing out on some underlying patterns. You'll suspect underfitting if your model shows subpar performance on both training and validation/test datasets.
+
+To mitigate these issues:
+1. For overfitting:
+   - Use more data: If feasible, increase the size of your training data.
+   - Data augmentation: This technique increases the diversity of your training data without collecting new data, by altering the existing data.
+   - Regularization: Techniques like L1, L2, and dropout add penalties to the loss function or modify the network, preventing complex models from memorizing the noise in the training data.
+   - Simplify the model: Reduce the complexity of the model by decreasing the number of layers or the number of units in each layer.
+   - Early stopping: This involves stopping the training process when the model’s performance on the validation data starts to degrade.
+
+2. For underfitting:
+   - Add complexity to the model: You might need a more complex model, with more layers or more units per layer.
+   - Feature engineering: The creation of new features or transformation of existing ones might help the model capture more information.
+   - Reduce regularization: If you've applied regularization, reducing it might allow the model to learn more from the data.
+   - Adjust the learning rate: Sometimes, the model needs a different speed of learning. Try tuning the learning rate.
+
+In both cases, using a validation set for hyperparameter tuning, and a test set for final evaluation, can provide a more accurate measure of model performance. Also, cross-validation can help ensure that your model's performance is consistent across different subsets of the data.
+
+---
+
+**9) Topic:** Fundamentals, **Level**:Advanced
+
+**Q:** How does hyperparameter tuning affect the performance of a deep learning model? What methods can you use to efficiently search for optimal hyperparameters?
+
+---
+
+**10) Topic:** Architectures, **Level**:Intermediate
+**Q:** In the context of ResNets, what is the primary purpose of skip connections (or residual connections)? How do they help in training deeper networks?
+
+---
+
+**11) Topic:** Architectures, **Level**:Advanced
+
+**Q:** Compare and contrast the architecture and use-cases for Recurrent Neural Networks, Long Short-Term Memory networks, and Gated Recurrent Units.
+
+
+**12) Topic:** Architectures, **Level**:Advanced 
+**Q:** What are capsule networks and how do they attempt to address the limitations of convolutional neural networks?
+
+**13) Topic:** Architectures, **Level**:Advanced 
+**Q:** Describe the scenarios where traditional CNNs and RNNs fall short, where you would instead recommend the use of Graph Neural Networks. How do GNNs handle relational data differently?
+
+**14) Topic:** Architectures, **Level**:Advanced  
+**Q:** Explain the concept of self-supervised learning and how it differs from supervised and unsupervised learning paradigms. What are its main advantages and potential applications in real-world scenarios?
+
+**15) Topic:** Architectures, **Level**:Advanced
+Describe the process and importance of neural architecture search in model development. What are the computational costs, and how can they be mitigated?            
+
+**16) Topic:** Architectures, **Level**:Advanced 
+Define meta-learning in the context of deep learning, and provide examples of scenarios where meta-learning is beneficial. How does it help in scenarios with limited labeled data or diverse tasks?
+
+**17) Topic:** Architectures, **Level**:Advanced
+What are Spatial Transformer Networks, and how do they enhance the capabilities of CNNs? What specific problem do they solve regarding data representation?
+
+**18) Topic:** Architectures, **Level**:Advanced
+Explain the principle of zero-shot learning. How does it differ from few-shot learning, and in what scenarios might it be particularly useful or challenging?
+
+**19) Topic:** Architectures, **Level**:Advanced
+What are autoencoders, and what distinguishes them from other neural network architectures? What are their primary use-cases, and what are the differences between variational autoencoders (VAEs) and traditional autoencoders?
+
+**20) Topic:** Architectures, **Level**:Advanced
+What are Siamese networks, and where are they most effectively applied? How do they differ in architecture and function from traditional neural networks?
+
+**21) Topic:** Architectures, **Level**:Advanced
+Can you explain the architecture of WaveNet and its significance in deep learning applications? How does it differ from traditional recurrent neural networks in handling sequential data?
+
+**22) Topic:** Architectures, **Level**:Advanced
+How do generative models differ from discriminative models in deep learning? What are their respective strengths and weaknesses, and where are they typically applied?
+
+**23) Topic:** Training Techniques, **Level**:Intermediate
+What is dropout, and how does it prevent overfitting in neural networks?
+
+**24) Topic:** Training Techniques, **Level**:Advanced
+Explain the concept and process of backpropagation. Why is it central to training deep neural networks?
+
+**25) Topic:** Training Techniques, **Level**:Advanced
+What is the significance of weight initialization in deep neural networks? How does it affect the training process?
+
+**26) Topic:** Training Techniques, **Level**:Advanced 
+Explain the difference between batch, mini-batch, and stochastic gradient descent. How do they affect the speed and stability of the training process?
+
+**27) Topic:** Training Techniques, **Level**:Advanced
+How do you implement early stopping in a deep learning model, and why might you choose to use it? What are the potential drawbacks?
+
+**28) Topic:** Training Techniques, **Level**:Advanced
+What is the purpose of a loss function in training deep learning models? Can you give examples of different types of loss functions and explain their applications?
+
+**29) Topic:** Training Techniques, **Level**:Advanced
+Explain the concept of attention mechanisms in neural networks. How do they improve model performance, and what are typical use cases?
+
 | 30  | Training Techniques     | Advanced    | How do contrastive learning methods work, and what are their advantages? How do they differ from traditional supervised learning methods?                                     |
 | 31  | Training Techniques     | Advanced    | What is adversarial training, and why is it used? How does it improve the robustness of deep learning models, and what are the potential drawbacks?                           |
 | 32  | Training Techniques     | Advanced    | What role does the choice of activation function play in the behavior of a deep learning model? Can you discuss a scenario where one might be preferred over another?        |
