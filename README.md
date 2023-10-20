@@ -244,6 +244,7 @@ In both cases, using a validation set for hyperparameter tuning, and a test set 
 ---
 
 **10) Topic:** Architectures, **Level**:Intermediate
+
 **Q:** In the context of ResNets, what is the primary purpose of skip connections (or residual connections)? How do they help in training deeper networks?
 
 ---
@@ -255,116 +256,236 @@ In both cases, using a validation set for hyperparameter tuning, and a test set 
 ---
 
 **12) Topic:** Architectures, **Level**:Advanced 
+
 **Q:** What are capsule networks and how do they attempt to address the limitations of convolutional neural networks?
 
 ---
 
 **13) Topic:** Architectures, **Level**:Advanced 
+
 **Q:** Describe the scenarios where traditional CNNs and RNNs fall short, where you would instead recommend the use of Graph Neural Networks. How do GNNs handle relational data differently?
 
 ---
 
 **14) Topic:** Architectures, **Level**:Advanced  
+
 **Q:** Explain the concept of self-supervised learning and how it differs from supervised and unsupervised learning paradigms. What are its main advantages and potential applications in real-world scenarios?
 
 ---
 
 **15) Topic:** Architectures, **Level**:Advanced
-Describe the process and importance of neural architecture search in model development. What are the computational costs, and how can they be mitigated?            
+
+**Q:** Describe the process and importance of neural architecture search in model development. What are the computational costs, and how can they be mitigated?            
 
 ---
 
 **16) Topic:** Architectures, **Level**:Advanced 
-Define meta-learning in the context of deep learning, and provide examples of scenarios where meta-learning is beneficial. How does it help in scenarios with limited labeled data or diverse tasks?
+
+**Q:** Define meta-learning in the context of deep learning, and provide examples of scenarios where meta-learning is beneficial. How does it help in scenarios with limited labeled data or diverse tasks?
 
 ---
 
 **17) Topic:** Architectures, **Level**:Advanced
-What are Spatial Transformer Networks, and how do they enhance the capabilities of CNNs? What specific problem do they solve regarding data representation?
+
+**Q:** What are Spatial Transformer Networks, and how do they enhance the capabilities of CNNs? What specific problem do they solve regarding data representation?
 
 ---
 
 **18) Topic:** Architectures, **Level**:Advanced
-Explain the principle of zero-shot learning. How does it differ from few-shot learning, and in what scenarios might it be particularly useful or challenging?
+
+**Q:** Explain the principle of zero-shot learning. How does it differ from few-shot learning, and in what scenarios might it be particularly useful or challenging?
 
 ---
 
 **19) Topic:** Architectures, **Level**:Advanced
-What are autoencoders, and what distinguishes them from other neural network architectures? What are their primary use-cases, and what are the differences between variational autoencoders (VAEs) and traditional autoencoders?
+
+**Q:** What are autoencoders, and what distinguishes them from other neural network architectures? What are their primary use-cases, and what are the differences between variational autoencoders (VAEs) and traditional autoencoders?
 
 ---
 
 **20) Topic:** Architectures, **Level**:Advanced
-What are Siamese networks, and where are they most effectively applied? How do they differ in architecture and function from traditional neural networks?
+
+**Q:** What are Siamese networks, and where are they most effectively applied? How do they differ in architecture and function from traditional neural networks?
 
 ---
 
 **21) Topic:** Architectures, **Level**:Advanced
-Can you explain the architecture of WaveNet and its significance in deep learning applications? How does it differ from traditional recurrent neural networks in handling sequential data?
+
+**Q:** Can you explain the architecture of WaveNet and its significance in deep learning applications? How does it differ from traditional recurrent neural networks in handling sequential data?
 
 ---
 
 **22) Topic:** Architectures, **Level**:Advanced
-How do generative models differ from discriminative models in deep learning? What are their respective strengths and weaknesses, and where are they typically applied?
+
+**Q:** How do generative models differ from discriminative models in deep learning? What are their respective strengths and weaknesses, and where are they typically applied?
 
 ---
 
 **23) Topic:** Training Techniques, **Level**:Intermediate
-What is dropout, and how does it prevent overfitting in neural networks?
+
+**Q:** What is dropout, and how does it prevent overfitting in neural networks?
 
 ---
 
 **24) Topic:** Training Techniques, **Level**:Advanced
-Explain the concept and process of backpropagation. Why is it central to training deep neural networks?
+
+**Q:** Explain the concept and process of backpropagation. Why is it central to training deep neural networks?
 
 ---
 
 **25) Topic:** Training Techniques, **Level**:Advanced
-What is the significance of weight initialization in deep neural networks? How does it affect the training process?
+
+**Q:** What is the significance of weight initialization in deep neural networks? How does it affect the training process?
 
 ---
 
 **26) Topic:** Training Techniques, **Level**:Advanced 
-Explain the difference between batch, mini-batch, and stochastic gradient descent. How do they affect the speed and stability of the training process?
+
+**Q:** Explain the difference between batch, mini-batch, and stochastic gradient descent. How do they affect the speed and stability of the training process?
 
 ---
 
 **27) Topic:** Training Techniques, **Level**:Advanced
-How do you implement early stopping in a deep learning model, and why might you choose to use it? What are the potential drawbacks?
+
+**Q:** How do you implement early stopping in a deep learning model, and why might you choose to use it? What are the potential drawbacks?
 
 ---
 
 **28) Topic:** Training Techniques, **Level**:Advanced
-What is the purpose of a loss function in training deep learning models? Can you give examples of different types of loss functions and explain their applications?
+
+**Q:** What is the purpose of a loss function in training deep learning models? Can you give examples of different types of loss functions and explain their applications?
 
 ---
 
 **29) Topic:** Training Techniques, **Level**:Advanced
-Explain the concept of attention mechanisms in neural networks. How do they improve model performance, and what are typical use cases?
+
+**Q:** Explain the concept of attention mechanisms in neural networks. How do they improve model performance, and what are typical use cases?
 
 ---
 
-| 30  | Training Techniques     | Advanced    | How do contrastive learning methods work, and what are their advantages? How do they differ from traditional supervised learning methods?                                     |
-| 31  | Training Techniques     | Advanced    | What is adversarial training, and why is it used? How does it improve the robustness of deep learning models, and what are the potential drawbacks?                           |
-| 32  | Training Techniques     | Advanced    | What role does the choice of activation function play in the behavior of a deep learning model? Can you discuss a scenario where one might be preferred over another?        |
-| 33  | Training Techniques     | Advanced    | How do curriculum learning and self-paced learning differ in approach and objectives? In what scenarios would each be more beneficial?                                         |
-| 34  | Training Techniques     | Advanced    | What is the role of distillation in deep learning? How does it assist in the transfer of knowledge, and what are its limitations?                                              |
-| 35  | Training Techniques     | Advanced    | How does active learning benefit deep learning models, and what are the typical scenarios where it's used? What challenges might one face when employing active learning?     |
-| 36  | Training Techniques     | Advanced    | What is the significance of multi-task learning in deep learning? How does it improve model performance, and what are the challenges associated with it?                      |
-| 37  | Optimization            | Advanced    | Explain the concept of learning rate decay. Why is it important, and how is it typically implemented in the training process?                                                  |
-| 38  | Optimization            | Advanced    | What is the role of the learning rate in the training of deep learning models? How do you determine an appropriate learning rate, and what are the implications of its misconfiguration? |
-| 39  | Optimization            | Advanced    | Describe the concept of a "confusion matrix" in evaluating the performance of a classification model. What insights can you derive from it?                                   |
-| 40  | Optimization            | Advanced    | How does feature scaling affect the training of deep learning models? Why is it important, and what are the common methods used for this purpose?                             |
-| 41  | Optimization            | Advanced    | What is Bayesian optimization in the context of deep learning, and how does it help in model tuning? What are its limitations compared to other optimization strategies?      |
-| 42  | Optimization            | Advanced    | In what ways can evolutionary algorithms be used in deep learning? What are the advantages and potential limitations of this approach?                                        |
-| 43  | Applications & Challenges | Intermediate | In what ways has deep learning been applied to the field of speech recognition? What are the current limitations of these applications?                                       |
-| 44  | Applications & Challenges | Advanced   | How do deep learning models handle time series forecasting? What are the challenges present in time series predictions, and how do modern models attempt to overcome these?   |
-| 45  | Applications & Challenges | Advanced   | In computer vision, how do deep learning models deal with object detection in real-time? What are the challenges involved and the common strategies used to address them?     |
-| 46  | Applications & Challenges | Advanced   | How are deep learning models used in natural language processing? What are the key challenges and limitations they face in this domain?                                       |
-| 47  | Applications & Challenges | Advanced   | What role do deep learning models play in healthcare, specifically in medical imaging? What are the ethical implications and challenges faced in this field?                   |
-| 48  | Applications & Challenges | Advanced   | How do deep learning models contribute to advancements in autonomous vehicles? What unique challenges do these applications present to deep learning techniques?             |
-| 49  | Applications & Challenges | Advanced   | Discuss the role of deep learning in predictive analytics. What are the benefits and limitations of using deep learning for predictive analytics in various industries?      |
-| 50  | Applications & Challenges | Advanced   | How is deep learning utilized in the realm of cybersecurity? What are the main benefits and challenges of applying these techniques in such a context?                        |
+**30) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** How do contrastive learning methods work, and what are their advantages? How do they differ from traditional supervised learning methods?
+
+---
+
+**31) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** What is adversarial training, and why is it used? How does it improve the robustness of deep learning models, and what are the potential drawbacks? 
+
+---
+
+**32) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** What role does the choice of activation function play in the behavior of a deep learning model? Can you discuss a scenario where one might be preferred over another? 
+
+---
+
+**33) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** How do curriculum learning and self-paced learning differ in approach and objectives? In what scenarios would each be more beneficial?
+
+---
+
+**34) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** What is the role of distillation in deep learning? How does it assist in the transfer of knowledge, and what are its limitations? 
+
+---
+
+**35) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** How does active learning benefit deep learning models, and what are the typical scenarios where it's used? What challenges might one face when employing active learning? 
+
+---
+
+**36) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** What is the significance of multi-task learning in deep learning? How does it improve model performance, and what are the challenges associated with it?
+
+---
+
+**37) Topic:** Training Techniques, **Level**:Advanced
+
+**Q:** Explain the concept of learning rate decay. Why is it important, and how is it typically implemented in the training process? 
+
+---
+
+**38) Topic:** Optimization, **Level**:Advanced
+
+**Q:** What is the role of the learning rate in the training of deep learning models? How do you determine an appropriate learning rate, and what are the implications of its misconfiguration?
+
+---
+
+**39) Topic:** Optimization, **Level**:Advanced 
+
+**Q:** Describe the concept of a "confusion matrix" in evaluating the performance of a classification model. What insights can you derive from it? 
+
+---
+
+**40) Topic:** Optimization, **Level**:Advanced
+
+**Q:** How does feature scaling affect the training of deep learning models? Why is it important, and what are the common methods used for this purpose? 
+
+---
+
+**41) Topic:** Optimization, **Level**:Advanced
+
+**Q:** What is Bayesian optimization in the context of deep learning, and how does it help in model tuning? What are its limitations compared to other optimization strategies? 
+
+---
+
+**42) Topic:** Optimization, **Level**:Advanced
+
+**Q:** In what ways can evolutionary algorithms be used in deep learning? What are the advantages and potential limitations of this approach?
+
+---
+
+**43) Topic:** Optimization, **Level**:Advanced 
+
+**Q:** In what ways has deep learning been applied to the field of speech recognition? What are the current limitations of these applications?
+
+---
+
+**44) Topic:** Optimization, **Level**:Advanced
+
+**Q:** How do deep learning models handle time series forecasting? What are the challenges present in time series predictions, and how do modern models attempt to overcome these? 
+
+---
+
+**45) Topic:** Optimization, **Level**:Advanced
+
+**Q:** In computer vision, how do deep learning models deal with object detection in real-time? What are the challenges involved and the common strategies used to address them? 
+
+---
+
+**46) Topic:** Applications & Challenges, **Level**:Advanced
+
+**Q:** How are deep learning models used in natural language processing? What are the key challenges and limitations they face in this domain?
+
+---
+
+**47) Topic:** Applications & Challenges, **Level**:Advanced
+
+**Q:** What role do deep learning models play in healthcare, specifically in medical imaging? What are the ethical implications and challenges faced in this field? 
+
+---
+
+**48) Topic:** Applications & Challenges, **Level**:Advanced
+
+**Q:** How do deep learning models contribute to advancements in autonomous vehicles? What unique challenges do these applications present to deep learning techniques? 
+
+---
+
+**49) Topic:** Applications & Challenges, **Level**:Advanced
+
+**Q:** Discuss the role of deep learning in predictive analytics. What are the benefits and limitations of using deep learning for predictive analytics in various industries?
+
+---
+
+**50) Topic:** Applications & Challenges, **Level**:Advanced
+
+**Q:** How is deep learning utilized in the realm of cybersecurity? What are the main benefits and challenges of applying these techniques in such a context? 
 
 ---
 
