@@ -252,60 +252,97 @@ In both cases, using a validation set for hyperparameter tuning, and a test set 
 
 **Q:** Compare and contrast the architecture and use-cases for Recurrent Neural Networks, Long Short-Term Memory networks, and Gated Recurrent Units.
 
+---
 
 **12) Topic:** Architectures, **Level**:Advanced 
 **Q:** What are capsule networks and how do they attempt to address the limitations of convolutional neural networks?
 
+---
+
 **13) Topic:** Architectures, **Level**:Advanced 
 **Q:** Describe the scenarios where traditional CNNs and RNNs fall short, where you would instead recommend the use of Graph Neural Networks. How do GNNs handle relational data differently?
+
+---
 
 **14) Topic:** Architectures, **Level**:Advanced  
 **Q:** Explain the concept of self-supervised learning and how it differs from supervised and unsupervised learning paradigms. What are its main advantages and potential applications in real-world scenarios?
 
+---
+
 **15) Topic:** Architectures, **Level**:Advanced
 Describe the process and importance of neural architecture search in model development. What are the computational costs, and how can they be mitigated?            
+
+---
 
 **16) Topic:** Architectures, **Level**:Advanced 
 Define meta-learning in the context of deep learning, and provide examples of scenarios where meta-learning is beneficial. How does it help in scenarios with limited labeled data or diverse tasks?
 
+---
+
 **17) Topic:** Architectures, **Level**:Advanced
 What are Spatial Transformer Networks, and how do they enhance the capabilities of CNNs? What specific problem do they solve regarding data representation?
+
+---
 
 **18) Topic:** Architectures, **Level**:Advanced
 Explain the principle of zero-shot learning. How does it differ from few-shot learning, and in what scenarios might it be particularly useful or challenging?
 
+---
+
 **19) Topic:** Architectures, **Level**:Advanced
 What are autoencoders, and what distinguishes them from other neural network architectures? What are their primary use-cases, and what are the differences between variational autoencoders (VAEs) and traditional autoencoders?
+
+---
 
 **20) Topic:** Architectures, **Level**:Advanced
 What are Siamese networks, and where are they most effectively applied? How do they differ in architecture and function from traditional neural networks?
 
+---
+
 **21) Topic:** Architectures, **Level**:Advanced
 Can you explain the architecture of WaveNet and its significance in deep learning applications? How does it differ from traditional recurrent neural networks in handling sequential data?
+
+---
 
 **22) Topic:** Architectures, **Level**:Advanced
 How do generative models differ from discriminative models in deep learning? What are their respective strengths and weaknesses, and where are they typically applied?
 
+---
+
 **23) Topic:** Training Techniques, **Level**:Intermediate
 What is dropout, and how does it prevent overfitting in neural networks?
+
+---
 
 **24) Topic:** Training Techniques, **Level**:Advanced
 Explain the concept and process of backpropagation. Why is it central to training deep neural networks?
 
+---
+
 **25) Topic:** Training Techniques, **Level**:Advanced
 What is the significance of weight initialization in deep neural networks? How does it affect the training process?
+
+---
 
 **26) Topic:** Training Techniques, **Level**:Advanced 
 Explain the difference between batch, mini-batch, and stochastic gradient descent. How do they affect the speed and stability of the training process?
 
+---
+
 **27) Topic:** Training Techniques, **Level**:Advanced
 How do you implement early stopping in a deep learning model, and why might you choose to use it? What are the potential drawbacks?
+
+---
 
 **28) Topic:** Training Techniques, **Level**:Advanced
 What is the purpose of a loss function in training deep learning models? Can you give examples of different types of loss functions and explain their applications?
 
+---
+
 **29) Topic:** Training Techniques, **Level**:Advanced
 Explain the concept of attention mechanisms in neural networks. How do they improve model performance, and what are typical use cases?
+
+---
 
 | 30  | Training Techniques     | Advanced    | How do contrastive learning methods work, and what are their advantages? How do they differ from traditional supervised learning methods?                                     |
 | 31  | Training Techniques     | Advanced    | What is adversarial training, and why is it used? How does it improve the robustness of deep learning models, and what are the potential drawbacks?                           |
