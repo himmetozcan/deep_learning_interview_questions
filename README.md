@@ -1,7 +1,7 @@
 
 # Deep Learning Interview Questions
 
-**0)** Deep learning model behavior can be influenced by a variety of factors, and often there's more than one aspect contributing to the observed performance. Let's go through the non-ideal scenarios and discuss multiple possible causes and potential solutions for each:
+**00)** Deep learning model behavior can be influenced by a variety of factors, and often there's more than one aspect contributing to the observed performance. Let's go through the non-ideal scenarios and discuss multiple possible causes and potential solutions for each:
 
 1. **Training Loss Decreases but Test Loss Decreases and Then Increases (Overfitting)**:
     - **Possible Reasons**:
@@ -58,6 +58,42 @@
         - **Different Model**: Switch to a different type of model that can capture the complexity of the data (e.g., from linear to deep neural networks).
 
 Each of these scenarios may involve a combination of the factors mentioned, and often the solutions involve a mix of adjustments. Methodical experimentation, proper validation, and understanding the data and problem context are key to diagnosing issues correctly and finding the right adjustments.
+
+
+---
+**0)** When do we use mse loss and when mae loss, why do we select one for another, and in which cases are which is better and so during training of a deep learning model.
+
+Mean Squared Error (MSE) and Mean Absolute Error (MAE) are both popular loss functions used during the training of deep learning models, particularly in regression tasks. They measure the average error between the predicted values and the actual ground truths. The choice between MSE and MAE depends on the specific characteristics of the problem and the data, as well as the particular nuances of each loss function.
+
+**Mean Squared Error (MSE):**
+
+- **Formula**: MSE = (1/n) * Σ(actual - predicted)²
+- **Characteristics**:
+    - It squares the error, which means it places a higher weight on larger errors. This results in a loss function that is more sensitive to outliers in the dataset.
+    - Because of the squaring, the gradient of MSE is quite steep for large loss values, which accelerates convergence during training — this can be beneficial for certain models or datasets.
+- **When to Use**:
+    - When your data is generally free from outliers, or when those outliers are particularly important to capture correctly (since MSE will cause the model to focus more on them).
+    - When you want your model to be more sensitive to differences in prediction sizes — since the squared term will amplify larger errors.
+
+**Mean Absolute Error (MAE):**
+
+- **Formula**: MAE = (1/n) * Σ|actual - predicted|
+- **Characteristics**:
+    - It computes the absolute error, so it treats all errors the same regardless of their direction or magnitude. This makes it less sensitive to outliers than MSE.
+    - The gradient of MAE is constant, which might result in more stable and consistent training. However, it may also slow down the training process because the loss surface is flatter than that of MSE.
+- **When to Use**:
+    - When your data contains many outliers, and you want to mitigate their impact on the training process.
+    - When it’s important to treat all errors equally, whether they're big or small. For instance, if over-predicting is just as bad as under-predicting, MAE treats both cases the same.
+
+**Comparison and Decision Points**:
+
+- **Sensitivity to Outliers**: If your dataset has many outliers or if outliers could drastically impact the model's performance, MAE might be more appropriate. On the other hand, if capturing outliers is important, MSE might be better.
+- **Training Speed and Stability**: MSE might converge faster due to its steeper gradients, especially with large error values. However, this might also lead to stability issues, especially with high learning rates. MAE, by contrast, tends to offer more stable convergence.
+- **Interpretability**: MAE is often easier to interpret than MSE since it operates in the same unit space as the original data, while MSE operates in squared units.
+- **Error Magnitude Sensitivity**: If it’s critical for the model to pay more attention to larger errors, MSE is the preferred choice. If all errors are equally important, MAE is more appropriate.
+
+Ultimately, the decision between MSE and MAE can also come down to empirical performance; sometimes, it's beneficial to try both and compare how the model performs in validation and test scenarios. Additionally, in specific contexts, there might be variations or custom loss functions that combine properties of both MSE and MAE in some way to suit the problem at hand.
+
 
 ---
 
